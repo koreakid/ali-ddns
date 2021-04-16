@@ -18,7 +18,7 @@
 
 
 
-1- 运行自动解析域名脚本
+1.- 运行自动解析域名脚本
 
 1.1- git clone https://github.com/risfeng/aliyun-ddns-shell.git 如果遇到SSL错误，则运行git clone https://hub.fastgit.org/risfeng/aliyun-ddns-shell.git
 
@@ -64,16 +64,16 @@
     crontab -l             # 列出某个用户的任务计划
     ```
     
-2.- 配置任务定时任务
+2.      -配置任务定时任务
         - 建议不要把任务执行频率设置小于等10，因为域名解析记录生效时间最短理论上是10分钟，往往都会超过10分，建议15-20分钟。
         - 开始配置
         ```
 
-2.1 crontab -e
+2.1     crontab -e
         # 按i进入标记模式
         # 输入：
 
-2.2 */15 * * * * /root/aliyun-ddns-shell/src/aliyun/aliyun-ddns.sh -run >/dev/null 2>&1 &
+2.2     */15 * * * * /root/aliyun-ddns-shell/src/aliyun/aliyun-ddns.sh -run >/dev/null 2>&1 &
         # 说明：
         # */15 * * * * ：每15分钟执行一次 
         # 按 esc 后 输入:wq 回车 保存并退出
