@@ -20,18 +20,19 @@
 
 1.- 运行自动解析域名脚本
 
-1.1- git clone https://github.com/risfeng/aliyun-ddns-shell.git 如果遇到SSL错误，则运行git clone https://hub.fastgit.org/risfeng/aliyun-ddns-shell.git
+1.1- 执行git clone https://github.com/risfeng/aliyun-ddns-shell.git 如果遇到SSL错误，则运行git clone https://hub.fastgit.org/risfeng/aliyun-ddns-shell.git
 
 1.2- 给aliyun-ddns.sh脚本赋可执行权：`chmod +x aliyun-ddns-shell/src/aliyun/aliyun-ddns.sh`
+
     - 运行脚本，根据提示进行配置（第一次运行需要配置）
     - 如需要使用钉钉自定义机器人推送成功失败消息，请新建自定义钉钉机器人，配置access_token和消息加签密钥
     - 脚本支持2种运行方式：
         - 直接运行脚本根据提示选择需要使用的功能
         ```
         
-1.3 > cd aliyun-ddns-shell/src/aliyun
+1.3 > 执行 cd aliyun-ddns-shell/src/aliyun
 
-1.3.1>  bash aliyun-ddns.sh
+1.3.1>  执行 bash aliyun-ddns.sh
 
         1.配置并执行脚本
         2.仅配置
@@ -69,11 +70,13 @@
         - 开始配置
         ```
 
-2.1     crontab -e
+2.1     执行crontab -e
+
         # 按i进入标记模式
         # 输入：
 
-2.2     */15 * * * * /root/aliyun-ddns-shell/src/aliyun/aliyun-ddns.sh -run >/dev/null 2>&1 &
+2.2    执行 */15 * * * * /root/aliyun-ddns-shell/src/aliyun/aliyun-ddns.sh -run >/dev/null 2>&1 &
+
         # 说明：
         # */15 * * * * ：每15分钟执行一次 
         # 按 esc 后 输入:wq 回车 保存并退出
